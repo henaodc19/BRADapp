@@ -1,0 +1,53 @@
+
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title text-center>Agregar Negocio</ion-title>
+    <ion-buttons left>
+      <button ion-button (click)="navegarAtras()">
+        <ion-icon name="md-arrow-dropleft-circle"> Home</ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>Datos del negocio</h4>
+  <p>Todos los campos son oblogatorios</p>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Razon social</ion-label>
+      <ion-input type="text" [(ngModel)]="negocio.nombre"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Direccion</ion-label>
+      <ion-input type="text" [(ngModel)]="negocio.direccion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="negocio.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Categoria</ion-label>
+        <ion-select [(ngModel)] ="negocio.categoria">
+          <ion-option value="Comida">Comida</ion-option>
+          <ion-option value="Hogar">Hogar</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Sub Categoria</ion-label>
+        <ion-select [(ngModel)]="negocio.subCategoria">
+          <ion-option value="Comidas rapidas">Comidas rapidas</ion-option>
+          <ion-option value="Aseo del Hogar">Aseo del hogar</ion-option>
+        </ion-select>
+    </ion-item>
+  </ion-list>
+  <div text-center>
+    <button ion-button color="dark" round (click)="guardarNegocio()">Guardar</button>
+  </div>
+  
+</ion-content>
