@@ -1,4 +1,4 @@
-import { HomePage } from './../pages/home/home';
+import { LoginPage } from './../pages/login/login';
 
 import { TabsPage } from './../pages/tabs/tabs';
 
@@ -16,7 +16,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = TabsPage;
+  rootPage:any = LoginPage;
   
   pages: Array<{title: string, component: any}>;  
 
@@ -29,7 +29,7 @@ export class MyApp {
     });
 
     this.pages = [
-      { title: 'Cerrar seccion', component: TabsPage },
+      { title: 'Cerrar sesion', component: LoginPage },
     ];
   }
   

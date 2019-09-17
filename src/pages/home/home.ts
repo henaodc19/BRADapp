@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 
 import { AddNegocioPage } from './../add-negocio/add-negocio';
 import { Component } from '@angular/core';
@@ -21,8 +22,11 @@ export class HomePage {
     this.navCtrl.push(AddNegocioPage);
   }
 
+  prueba(){
+    this.navCtrl.push(LoginPage);
+  }
+
   getLocation(){
-    console.log("perris");
     this.geolocation.getCurrentPosition().then((resp) => {
       console.log(resp);
       this.location = resp;

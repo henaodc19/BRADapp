@@ -17,6 +17,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { Geolocation } from '@ionic-native/geolocation';
+import { LoginPage } from '../pages/login/login';
+import { AutenticacionProvider } from '../providers/autenticacion/autenticacion';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBzwYJPdtB7NJ8r4zYq-90maHA9HjERR1w",
@@ -35,7 +37,8 @@ export const firebaseConfig = {
     ContactoPage,
     NegocioPage,
     TabsPage,
-    AddNegocioPage
+    AddNegocioPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -52,14 +55,18 @@ export const firebaseConfig = {
     ContactoPage,
     NegocioPage,
     TabsPage,
-    AddNegocioPage
+    AddNegocioPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NegociosService,
-    Geolocation
+    Geolocation,
+    LoginPage,
+    AutenticacionProvider,
+    AutenticacionProvider
   ]
 })
 export class AppModule {}
