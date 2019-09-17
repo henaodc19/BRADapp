@@ -16,6 +16,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 export const firebaseConfig = {
   apiKey: "AIzaSyBzwYJPdtB7NJ8r4zYq-90maHA9HjERR1w",
     authDomain: "bradapp-96a59.firebaseapp.com",
@@ -56,7 +58,8 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NegociosService
+    NegociosService,
+    Geolocation
   ]
 })
 export class AppModule {}
