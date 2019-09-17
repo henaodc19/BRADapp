@@ -1,3 +1,4 @@
+import { HomePage } from './../pages/home/home';
 
 import { TabsPage } from './../pages/tabs/tabs';
 
@@ -5,7 +6,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { AddNegocioPage } from '../pages/add-negocio/add-negocio';
+
 
 
 @Component({
@@ -28,8 +29,7 @@ export class MyApp {
     });
 
     this.pages = [
-      { title: 'Ingresar Negocios', component: AddNegocioPage },
-      { title: 'Recuperar Negocios', component: AddNegocioPage }
+      { title: 'Cerrar seccion', component: TabsPage },
     ];
   }
   

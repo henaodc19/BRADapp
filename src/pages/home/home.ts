@@ -17,7 +17,7 @@ export class HomePage {
 
   }
 
-  prueba(){
+  adicionarNegocio(){
     this.navCtrl.push(AddNegocioPage);
   }
 
